@@ -1,0 +1,232 @@
+* {
+  position: relative;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: linear-gradient(200deg, #ffffff, #ffffff, rgba(255, 166, 0, 0.1), rgba(255, 166, 0, 0.3), rgba(255, 166, 0, 0.1), #ffffff);
+  background-size: 100% 300%;
+  animation: backlight 5s infinite;
+}
+
+@keyframes backlight {
+  0% {
+    background-position: 100% 30%;
+  }
+  100% {
+    background-position: 100% 90%;
+  }
+}
+@keyframes flow {
+  0% {
+    left: calc(+30px) F;
+  }
+  100% {
+    background-position: 100% 90%;
+  }
+}
+a:link {
+  text-decoration: none;
+  color: #f39800;
+}
+
+.all {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.all .title_word {
+  margin-top: 20px;
+  transform: rotate(-2deg);
+}
+.all .answer {
+  top: 0px;
+}
+.all .answer .baby_loudspeaker {
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1) rotate(10deg);
+  z-index: 5;
+  left: -150px;
+  width: 170px;
+}
+.all .answer #circle {
+  border-radius: 50%;
+  border: solid 13px #603813;
+  width: 30px;
+  height: 30px;
+  left: 35px;
+  top: -125px;
+}
+.all .answer p {
+  position: absolute;
+  white-space: nowrap;
+  left: 100px;
+  top: 45px;
+  font-size: 40px;
+  color: #603813;
+  font-weight: 900;
+  font-size: 32px;
+}
+.all .answer .encourage {
+  position: relative;
+  top: -80px;
+}
+.all .answer .encourage .try_word {
+  position: absolute;
+  white-space: nowrap;
+  top: 0px;
+  left: -10px;
+  font-weight: 900;
+  -webkit-text-stroke: 0.5px #603813;
+  text-shadow: 0px 0px 3px #351f0b;
+  z-index: 10;
+  font-size: 16px;
+  color: white;
+}
+.all .answer .encourage .star {
+  width: 100px;
+  height: 20px;
+  transform: rotate(-2deg);
+  background: linear-gradient(90deg, transparent, transparent, rgba(243, 152, 0, 0.1), rgba(243, 152, 0, 0.3), #f39800);
+  border-radius: 10px;
+  animation: flow 2s 2;
+}
+.all .answer .encourage .star_b {
+  top: 10px;
+  left: -80px;
+  width: 120px;
+}
+.all .answer .encourage .star_c {
+  top: -10px;
+  left: 90px;
+  width: 250px;
+}
+.all .answer .encourage .star_a {
+  top: -20px;
+  left: 110px;
+}
+.all .antrodia_cinnamomea {
+  position: relative;
+}
+.all .antrodia_cinnamomea .ac_word {
+  width: 500px;
+  margin: 0 auto;
+  white-space: normal;
+  top: 0px;
+  padding: 15px 20px 50px 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #603813;
+  border-radius: 10px;
+  font-size: 12px;
+  text-align: left;
+}
+.all .antrodia_cinnamomea img.ac_pic {
+  position: absolute;
+  top: 50px;
+  right: 0px;
+}
+.all .video {
+  top: -60px;
+}
+.all .video .share_video {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.all .video .share_video .share_video_word {
+  display: inline-block;
+  font-size: 14px;
+  color: #754c24;
+  margin-right: 10px;
+}
+.all .share_zone {
+  position: relative;
+}
+.all .share_zone .baby_tea {
+  position: absolute;
+  right: -220px;
+  top: 0px;
+  opacity: 0.7;
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+.all .share_zone .share_title {
+  display: inline-block;
+}
+.all .share_zone .share_subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+.all .share_zone .share_subtitle .share_game_word {
+  display: inline-block;
+  font-size: 14px;
+  color: #754c24;
+  margin-right: 10px;
+}
+.all .join_lottery {
+  text-align: center;
+  font-size: 11px;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: inline-block;
+  padding: 10px;
+  color: #603813;
+}
+.all .company {
+  top: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.all hr {
+  border: transparent;
+  border-bottom: solid 1px #603813;
+}
+.all .copyright {
+  margin: 10px;
+  font-size: 8px;
+  color: #603813;
+}
+
+@media screen and (max-width: 768px) {
+  .all .title_word {
+    top: 0px;
+  }
+  .all .answer {
+    left: 30px;
+  }
+  .all .answer .encourage .try_word {
+    font-size: 16px;
+    white-space: normal;
+    left: 20px;
+  }
+  .all .answer .encourage .return {
+    top: 90px;
+    left: 80px;
+  }
+  .all .antrodia_cinnamomea .ac_word {
+    width: 60%;
+  }
+  .all .antrodia_cinnamomea img.ac_pic {
+    right: 5%;
+    top: 95px;
+  }
+  .all .antrodia_cinnamomea .video iframe {
+    width: 100%;
+  }
+  .all .share_zone img.share_title {
+    width: 100%;
+  }
+}

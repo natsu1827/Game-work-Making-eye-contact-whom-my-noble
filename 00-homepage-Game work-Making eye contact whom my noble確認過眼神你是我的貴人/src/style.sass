@@ -1,0 +1,200 @@
+$color_orange: #f39800
+$color_brown: #603813
+
+.og_img
+  display: none!important
+
+*
+  // border: solid 1px black
+  position: relative
+  font-family: 微軟正黑體
+
+html,body
+  width: 100%
+  height: 100%
+  margin: 0
+  padding: 0
+  overflow-x: hidden
+  background: linear-gradient(200deg,#fff,#fff,rgba($color_orange,0.1),rgba($color_orange,0.3),rgba($color_orange,0.1),#fff)
+  background-size: 100% 300%
+  animation: backlight 5s infinite
+
+  @keyframes backlight
+    0%
+      background-position: 100% 30%
+    100%
+      background-position: 100% 90% 
+  
+a
+  text-decoration: none
+  
+.all
+  text-align: center
+  margin-left: auto
+  margin-right: auto
+  // width: 768px
+  
+  .title 
+    display: inline-block
+    transform: rotate(-2deg)/*整體旋轉*/
+    
+    .star
+      width: 100px
+      height: 20px
+      background: linear-gradient(90deg,transparent,transparent,rgba($color_orange,0.1),rgba($color_orange,0.3),$color_orange)
+      border-radius: 10px/*圓角*/
+      z-index: -1/*階層注意*/
+      animation: flow 2s infinite
+
+      @keyframes flow
+        0%
+          left: calc(+10px)
+
+    .a
+      top: 50px
+      left: -80px
+    .b
+      top: 120px
+      left: 50px
+    .c
+      top: -25px
+      left: 300px
+    .d
+      top: 130px
+      left: 300px
+      width: 250px
+
+  .caption
+    left: 280px
+    top: -80px
+    z-index: 20
+    .word
+      top: -65px
+      transform: rotate(3deg)
+      margin: 10px
+
+  .subtitle
+    color: $color_brown
+    font-weight: 500
+    font-size: 13px
+    font-weight: bold
+    line-height: 25px
+    top: -150px
+    left: 26%
+    background-color: rgba(255,255,255,0.5)
+    padding: 20px
+    border-radius: 20px
+    width: 45%
+    margin: 50px 0px
+    text-align: left
+  
+  .scroll
+    display: none
+    
+  .opt
+    display: inline-block
+    margin: 25px
+    margin-bottom: 80px
+    top: -100px
+    vertical-align: top
+    
+    :hover
+      width: 135%
+    
+  .magnifier
+    position: absolute
+    left: -18px
+    top: -130px
+  .baby_tea
+    position: fixed
+    left: 10%
+    bottom: 50px
+    opacity: 0.4
+    z-index: -5
+    
+  .share_text_zone
+    display: flex
+    justify-content: center
+    color: $color_brown
+    margin: 20px
+    
+  hr
+    border: transparent
+    border-bottom: solid 1px lighten($color_brown,30)
+    width: 700px
+    
+  .copyright
+    padding: 10px
+    font-size: 8px
+    color: $color_brown
+    margin-bottom: 20px
+    
+.portfolio_link 
+  z-index: 20
+  width: 100%
+  position: relative
+  bottom: 0px
+  text-align: center
+  font-size: 14px
+  letter-spacing: 5px
+  padding: 10px
+  background-color: $color_orange
+  a
+    text-decoration: none
+    color: white
+  .back
+    &:hover
+      color: lighten($color_brown,10)
+      border-bottom: dashed 1.5px 
+    
+@media screen and (min-width: 200px) and (max-width: 768px)
+  .all
+    display: flex
+    flex-direction: column
+    // margin-top: 50px
+    
+    .title img
+      width: 73%
+      margin-bottom: 30px
+      
+    .caption
+      left: 5%
+      top: 1em
+      img
+       width: 40%    
+      
+    .subtitle
+      width: 60%
+      top: -5em
+      left: 16%
+      margin: 50px 0px -80px 0px /*桌面板為margin: 50px 0px*/
+    
+    .scroll
+      display: block
+      color: $color_brown
+      text-align: center 
+      margin: 40px auto 150px auto
+      font-size: 20px
+      .arrow
+        font-size: 40px
+        writing-mode: vertical-lr
+        text-orientation: mixed
+        animation: down 1s infinite
+
+      @keyframes down
+        0%
+          bottom: calc(+0px)
+        50%
+          bottom: calc(-8px)
+        100%
+          bottom: calc(+0px)
+        
+      
+    .opt
+      margin-top: 70px
+      padding: 30px
+      
+    .baby_tea
+      width: 30%
+      left: 3%
+      
